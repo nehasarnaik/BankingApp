@@ -9,7 +9,7 @@ function Dashboard() {
   const user = useSelector((state) => {
     return state.user.userobj;
   });
-  console.log(user);
+  console.log("dashboard", user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,36 +23,48 @@ function Dashboard() {
   return (
     <div>
       {/* <nav className="navbar navbar-expand-lg background_colour"> */}
-        {/* <div className="icon "> */}
-          {/* <h2 className="beige-text text-center mx-auto">BANKING APP</h2> */}
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                {user.loading ? (<p>Loading..</p>) 
-                  : user.error ? ( <p>Error: {user.error}</p>) : (
-                <div >
-                  <span className="navbar-brand beige-text" onClick={toggleDetailsModal} >
-                  <img src="user-icon.jpg" alt="User Icon" width="30" height="30" className="mr-2"/>
+      {/* <div className="icon "> */}
+      {/* <h2 className="beige-text text-center mx-auto">BANKING APP</h2> */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            {user.loading ? (
+              <p>Loading..</p>
+            ) : user.error ? (
+              <p>Error: {user.error}</p>
+            ) : (
+              <div>
+                <span
+                  className="navbar-brand beige-text"
+                  onClick={toggleDetailsModal}
+                >
+                  <img
+                    src="user-icon.jpg"
+                    alt="User Icon"
+                    width="30"
+                    height="30"
+                    className="mr-2"
+                  />
                   &nbsp; {user.name}
-                  </span>
-                  <button
-                    className="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                    >
+                </span>
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNav"
+                  aria-controls="navbarNav"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
                   <span className="navbar-toggler-icon"></span>
                 </button>
               </div>
             )}
-                </ul>
-            </div>
-            </nav>
-          
-        {/* </div> */}
+          </ul>
+        </div>
+      </nav>
+
+      {/* </div> */}
       {/* </nav> */}
 
       <div className="container mt-5">
@@ -195,9 +207,9 @@ function Dashboard() {
             </div>
             <div className="modal-body">
               {/* Add more user details here */}
-              <p>Account Number: {user.accountNumber}</p>
+              <p>Account Number: {user.accountNo}</p>
               <p>Email: {user.email}</p>
-              <p>Mobile Number: {user.mobileNo}</p>
+              <p>Mobile Number: {user.mobile}</p>
               <p>Date of Birth: {user.dob}</p>
               <p>Address: {user.address}</p>
               <p>Aadhar Number: {user.aadhar}</p>
