@@ -1,6 +1,6 @@
 import axios from "axios"
 import { ADD_USER, FAIL_REQUEST, MAKE_REQUEST } from "./ActionType"
-import { toast } from "react-toastify"
+import { toast } from "react-toastify";
 
 export const makeRequest=()=>{
     return{
@@ -21,6 +21,12 @@ export const addUser=()=>{
     }
 }
 
+export const getUser=()=>{
+    return{
+        type:ADD_USER
+    }
+}
+
 export const RegisterUser=(data)=>{
     return(dispatch)=>{
         dispatch(makeRequest());
@@ -33,6 +39,29 @@ export const RegisterUser=(data)=>{
                 progressStyle: { background: ' #597268'},
                 style: { color: '#597268' },
             });
+        }).catch(err=>{
+            dispatch(failRequest(err.message))
+        })
+    }
+}
+
+export const GetUser=(accountNumber,navigate)=>{
+    return(dispatch)=>{
+        dispatch(makeRequest());
+        axios.get('http://localhost:4000/user?accountNo='+accountNumber).then(res=>{
+            console.log(res.data);
+            
+            if(res.data.length===0){
+                navigate('/bankingService');
+                toast.info('Account number is not registered', {
+                        position: toast.POSITION.BOTTOM_CENTER,
+                        progressStyle: { background: ' #597268'},
+                        style: { color: '#597268' },
+                    });
+            }
+            else{
+                navigate('/dashboard');
+            }
         }).catch(err=>{
             dispatch(failRequest(err.message))
         })

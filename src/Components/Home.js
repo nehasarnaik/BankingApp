@@ -15,7 +15,7 @@ const  Home = () => {
                     <Link to={'/register'} class="nav-link padding">Self Register</Link>
                 </li>
                 <li class="nav-item">
-                    <Link to={'/'} class="nav-link padding" >Banking as Service</Link>
+                    <Link to={'/bankingService'} class="nav-link padding" >Banking as Service</Link>
                 </li>
                 </ul>
             </div>
