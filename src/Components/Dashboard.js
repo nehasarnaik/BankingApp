@@ -11,7 +11,7 @@ function Dashboard() {
   const user = useSelector((state) => {
     return state.user.userobj;
   });
-  console.log(user);
+  console.log("dashboard", user);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -50,6 +50,7 @@ function Dashboard() {
                   </button>
                 </div>
               )}
+
           </ul>
         </div>
       </nav>
@@ -72,8 +73,8 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-color btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
                         onClick={() => navigate('/dashboard/banking')}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Banking
                       </button>
@@ -90,8 +91,8 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
                         onClick={() => navigate('/dashboard/investments')}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Investments
                       </button>
@@ -108,8 +109,8 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
                         onClick={() => navigate('/dashboard/loans')}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Loans
                       </button>
@@ -126,8 +127,8 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
                         onClick={() => navigate('/dashboard/fintech')}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Fintech
                       </button>
@@ -144,8 +145,8 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
                         onClick={() => navigate('/dashboard/exchanges')}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Exchange
                       </button>
@@ -162,8 +163,8 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
                         onClick={() => navigate('/dashboard/insurance')}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Insurance
                       </button>
@@ -203,9 +204,9 @@ function Dashboard() {
             </div>
             <div className="modal-body">
               {/* Add more user details here */}
-              <p>Account Number: {user.accountNumber}</p>
+              <p>Account Number: {user.accountNo}</p>
               <p>Email: {user.email}</p>
-              <p>Mobile Number: {user.mobileNo}</p>
+              <p>Mobile Number: {user.mobile}</p>
               <p>Date of Birth: {user.dob}</p>
               <p>Address: {user.address}</p>
               <p>Aadhar Number: {user.aadhar}</p>

@@ -1,4 +1,3 @@
-
 import {
   ADD_USER,
   FAIL_REQUEST,
@@ -6,9 +5,8 @@ import {
   FETCH_USER_FAILURE,
   FETCH_USER_REQUEST,
   FETCH_USER_SUCCESS,
-  GET_USER
+  GET_USER,
 } from "./ActionType";
-
 
 const initialstate = {
   loading: true,
@@ -54,12 +52,13 @@ export const Reducer = (state = initialstate, action) => {
         loading: false,
         errmessage: action.payload,
       };
-      case GET_USER:
-           return{
-                ...state,
-                loading:false
-            }
-        
-        default: return state
-    }
-}
+    case GET_USER:
+      return {
+        ...state,
+        loading: false,
+      };
+
+    default:
+      return state;
+  }
+};

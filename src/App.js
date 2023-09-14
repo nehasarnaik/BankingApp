@@ -19,6 +19,7 @@ import Exchange from './Components/Exchange';
 function App() {
   return (
     <Provider store={Store}>
+
     <div className="App">
       <BrowserRouter>
         <div className='header background_colour'>
