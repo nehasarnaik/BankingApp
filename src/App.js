@@ -6,6 +6,7 @@ import Register from './Components/Register';
 import { ToastContainer } from 'react-toastify';
 import { Provider } from 'react-redux';
 import Store from './Redux/Store';
+import BankingServices from './Components/BankingServices';
 
 function App() {
   
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/bankingServices' element={<BankingServices></BankingServices>}></Route>
       </Routes>
       </BrowserRouter>
       <ToastContainer toastStyle={{ color: "crimson" }} />
