@@ -1,0 +1,36 @@
+.banking-table {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.banking-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.banking-table th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.banking-table th {
+    background-color: #f2f2f2;
+}
+
+.banking-table h1 {
+    text-align: center;
+}
+
+.banking-table h4 {
+    margin: 0;
+}
+
+.banking-table img {
+    max-width: 25%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}

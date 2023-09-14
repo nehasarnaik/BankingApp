@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUserDetails } from "../Redux/dashboardActions";
 import "./script.css";
+import { useNavigate } from 'react-router-dom';
+
 
 function Dashboard() {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
-
+  const navigate = useNavigate();
   const user = useSelector((state) => {
     return state.user.userobj;
   });
@@ -25,41 +27,30 @@ function Dashboard() {
       {/* <nav className="navbar navbar-expand-lg background_colour"> */}
       {/* <div className="icon "> */}
       {/* <h2 className="beige-text text-center mx-auto">BANKING APP</h2> */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            {user.loading ? (
-              <p>Loading..</p>
-            ) : user.error ? (
-              <p>Error: {user.error}</p>
-            ) : (
-              <div>
-                <span
-                  className="navbar-brand beige-text"
-                  onClick={toggleDetailsModal}
-                >
-                  <img
-                    src="user-icon.jpg"
-                    alt="User Icon"
-                    width="30"
-                    height="30"
-                    className="mr-2"
-                  />
-                  &nbsp; {user.name}
-                </span>
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarNav"
-                  aria-controls="navbarNav"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-              </div>
-            )}
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            {user.loading ? (<p>Loading..</p>)
+              : user.error ? (<p>Error: {user.error}</p>) : (
+                <div >
+                  <span className="navbar-brand beige-text" onClick={toggleDetailsModal} >
+                    <img src="user-icon.jpg" alt="User Icon" width="30" height="30" className="mr-2" />
+                    &nbsp; {user.name}
+                  </span>
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              )}
+
           </ul>
         </div>
       </nav>
@@ -82,6 +73,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-color btn-lg"
+                        onClick={() => navigate('/dashboard/banking')}
                         style={{ backgroundColor: "#3b4960" }}
                       >
                         Banking
@@ -99,6 +91,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
+                        onClick={() => navigate('/dashboard/investments')}
                         style={{ backgroundColor: "#3b4960" }}
                       >
                         Investments
@@ -116,6 +109,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
+                        onClick={() => navigate('/dashboard/loans')}
                         style={{ backgroundColor: "#3b4960" }}
                       >
                         Loans
@@ -133,6 +127,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
+                        onClick={() => navigate('/dashboard/fintech')}
                         style={{ backgroundColor: "#3b4960" }}
                       >
                         Fintech
@@ -150,6 +145,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
+                        onClick={() => navigate('/dashboard/exchanges')}
                         style={{ backgroundColor: "#3b4960" }}
                       >
                         Exchange
@@ -167,9 +163,10 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
+                        onClick={() => navigate('/dashboard/insurance')}
                         style={{ backgroundColor: "#3b4960" }}
                       >
-                        Inc
+                        Insurance
                       </button>
                     </div>
                   </div>
