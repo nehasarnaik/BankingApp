@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUserDetails } from "../Redux/dashboardActions";
 import "./script.css";
+import { useNavigate } from 'react-router-dom';
+
 
 function Dashboard() {
   const [showDetailsModal, setShowDetailsModal] = useState(false);
-
+  const navigate = useNavigate();
   const user = useSelector((state) => {
     return state.user.userobj;
   });
@@ -23,17 +25,17 @@ function Dashboard() {
   return (
     <div>
       {/* <nav className="navbar navbar-expand-lg background_colour"> */}
-        {/* <div className="icon "> */}
-          {/* <h2 className="beige-text text-center mx-auto">BANKING APP</h2> */}
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                {user.loading ? (<p>Loading..</p>) 
-                  : user.error ? ( <p>Error: {user.error}</p>) : (
+      {/* <div className="icon "> */}
+      {/* <h2 className="beige-text text-center mx-auto">BANKING APP</h2> */}
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            {user.loading ? (<p>Loading..</p>)
+              : user.error ? (<p>Error: {user.error}</p>) : (
                 <div >
                   <span className="navbar-brand beige-text" onClick={toggleDetailsModal} >
-                  <img src="user-icon.jpg" alt="User Icon" width="30" height="30" className="mr-2"/>
-                  &nbsp; {user.name}
+                    <img src="user-icon.jpg" alt="User Icon" width="30" height="30" className="mr-2" />
+                    &nbsp; {user.name}
                   </span>
                   <button
                     className="navbar-toggler"
@@ -43,16 +45,16 @@ function Dashboard() {
                     aria-controls="navbarNav"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
-                    >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-              </div>
-            )}
-                </ul>
-            </div>
-            </nav>
-          
-        {/* </div> */}
+                  >
+                    <span className="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              )}
+          </ul>
+        </div>
+      </nav>
+
+      {/* </div> */}
       {/* </nav> */}
 
       <div className="container mt-5">
@@ -71,6 +73,7 @@ function Dashboard() {
                       <button
                         className="btn btn-primary btn-color btn-lg"
                         style={{ backgroundColor: "#5EBFAC" }}
+                        onClick={() => navigate('/dashboard/banking')}
                       >
                         Banking
                       </button>
@@ -88,6 +91,7 @@ function Dashboard() {
                       <button
                         className="btn btn-primary btn-lg"
                         style={{ backgroundColor: "#5EBFAC" }}
+                        onClick={() => navigate('/dashboard/investments')}
                       >
                         Investments
                       </button>
@@ -105,6 +109,7 @@ function Dashboard() {
                       <button
                         className="btn btn-primary btn-lg"
                         style={{ backgroundColor: "#5EBFAC" }}
+                        onClick={() => navigate('/dashboard/loans')}
                       >
                         Loans
                       </button>
@@ -122,6 +127,7 @@ function Dashboard() {
                       <button
                         className="btn btn-primary btn-lg"
                         style={{ backgroundColor: "#5EBFAC" }}
+                        onClick={() => navigate('/dashboard/fintech')}
                       >
                         Fintech
                       </button>
@@ -139,6 +145,7 @@ function Dashboard() {
                       <button
                         className="btn btn-primary btn-lg"
                         style={{ backgroundColor: "#5EBFAC" }}
+                        onClick={() => navigate('/dashboard/exchanges')}
                       >
                         Exchange
                       </button>
@@ -156,8 +163,9 @@ function Dashboard() {
                       <button
                         className="btn btn-primary btn-lg"
                         style={{ backgroundColor: "#5EBFAC" }}
+                        onClick={() => navigate('/dashboard/insurance')}
                       >
-                        Inc
+                        Insurance
                       </button>
                     </div>
                   </div>

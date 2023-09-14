@@ -1,0 +1,34 @@
+.fintech-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.fintech-container .section {
+    margin-bottom: 30px;
+}
+
+.fintech-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.fintech-container ul {
+
+    margin-left: 20px;
+    font-size: 16px;
+    color: #666;
+    padding-left: 0;
+}
+
+.fintech-container li {
+    margin-bottom: 10px;
+}
+
+.fintech-container p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #666;
+}
