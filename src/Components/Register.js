@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { RegisterUser } from "../Redux/Action";
 import './script.css'
 
+
 const Register = () => {
     const[name,setName]=useState('');
     const[email,setEmail]=useState('');

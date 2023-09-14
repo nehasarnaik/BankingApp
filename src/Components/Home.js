@@ -5,7 +5,7 @@ import './script.css'
 const  Home = () => {
     return ( 
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg  nav">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -20,6 +20,10 @@ const  Home = () => {
                 </ul>
             </div>
             </nav>
+            <div className="background">
+            </div>
+               
+            
         </div>
      );
 }

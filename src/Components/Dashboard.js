@@ -70,7 +70,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-color btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Banking
                       </button>
@@ -87,7 +87,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Investments
                       </button>
@@ -104,7 +104,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Loans
                       </button>
@@ -121,7 +121,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Fintech
                       </button>
@@ -138,7 +138,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Exchange
                       </button>
@@ -155,7 +155,7 @@ function Dashboard() {
                     <div className="card-body">
                       <button
                         className="btn btn-primary btn-lg"
-                        style={{ backgroundColor: "#5EBFAC" }}
+                        style={{ backgroundColor: "#3b4960" }}
                       >
                         Inc
                       </button>

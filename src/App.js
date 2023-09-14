@@ -14,6 +14,7 @@ import BankingService from './Components/BankingService';
 function App() {
   return (
     <Provider store={Store}>
+
     <div className="App">
       <BrowserRouter>
         <div className='header background_colour'>

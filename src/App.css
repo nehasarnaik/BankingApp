@@ -15,6 +15,7 @@
 
 .App-header {
   background-color: #282c34;
+  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,9 +39,10 @@
 }
 
 .background_colour{
-  background-color: #597268;
+  background-image: url("./image.jpg");
   height: 100px;
   color: beige;
+  opacity: 80%;
 }
 
 .text_padding{
