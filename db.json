@@ -23,12 +23,32 @@
     {
       "name": "Sarnaik",
       "email": "s@gmail.com",
-      "accountNo": "1234",
+      "accountNo": "12345",
       "mobile": "7741896577",
       "dob": "22/22/2222",
       "address": "Maharashtra",
       "aadhar": "63476437",
       "id": 3
+    },
+    {
+      "name": "sarah",
+      "email": "sarah@gmail.com",
+      "accountNo": "123456",
+      "mobile": "7154969433",
+      "dob": "14-09-2000",
+      "address": "18a/31 4th cross street ,Indira Nagar Adyar ch-20",
+      "aadhar": "1123445566",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "email": "abc@gmail.com",
+      "accountNo": "1122",
+      "mobile": "7786567865",
+      "dob": "33/33/3333",
+      "address": "India",
+      "aadhar": "7864",
+      "id": 5
     }
   ]
 }

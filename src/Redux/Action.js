@@ -1,6 +1,7 @@
 import axios from "axios"
-import { ADD_USER, FAIL_REQUEST, MAKE_REQUEST } from "./ActionType"
-import { toast } from "react-toastify";
+import { ADD_USER, GET_USER,FAIL_REQUEST, MAKE_REQUEST } from "./ActionType"
+import { toast } from "react-toastify"
+
 
 export const makeRequest=()=>{
     return{
@@ -20,10 +21,10 @@ export const addUser=()=>{
         type:ADD_USER
     }
 }
-
+   
 export const getUser=()=>{
     return{
-        type:ADD_USER
+        type:GET_USER
     }
 }
 
