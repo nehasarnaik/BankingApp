@@ -29,6 +29,16 @@
       "address": "Maharashtra",
       "aadhar": "63476437",
       "id": 3
+    },
+    {
+      "name": "sarah",
+      "email": "sarah@gmail.com",
+      "accountNo": "123456",
+      "mobile": "7154969433",
+      "dob": "14-09-2000",
+      "address": "18a/31 4th cross street ,Indira Nagar Adyar ch-20",
+      "aadhar": "1123445566",
+      "id": 4
     }
   ]
 }
