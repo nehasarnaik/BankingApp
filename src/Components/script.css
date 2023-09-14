@@ -18,3 +18,17 @@
     padding-top: 10%;
     color: #597268;
 }
+
+.background_colour{
+    background-color: #597268;
+    height: 100px;
+    color: beige;
+  }
+
+  .beige-text {
+    color: beige; /* Set the desired font color (beige) */
+  }
+
+  .btn-color{
+    background-color :#9B59B6
+  }
