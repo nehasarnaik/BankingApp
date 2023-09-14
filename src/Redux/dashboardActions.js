@@ -29,7 +29,7 @@ export const fetchUserFailure = (error) => {
   };
 };
 //this shloud be done while login is succesfull
-sessionStorage.setItem("id", JSON.stringify(1));
+//sessionStorage.setItem("id", JSON.stringify(1));
 const id = sessionStorage.getItem("id");
 // Async Action to Fetch User Details
 export const fetchUserDetails = () => {
